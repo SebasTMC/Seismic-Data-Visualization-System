@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "8080:80"
     volumes:
       - ./src:/var/www/html:rw
     depends_on:
@@ -22,7 +22,7 @@ services:
   db:
     image: postgres:17
     ports:
-      - "5433:5432"
+      - "5434:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
       # Montar archivos SQL en el orden correcto
